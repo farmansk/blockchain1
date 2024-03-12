@@ -2,14 +2,16 @@
   "name": "blockchain1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "sol.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon sol.js"
+    "start": "nodemon sol.js",
+    "build": "nodemon sol.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^3.1.0",
     "web3": "^4.5.0"
   }
 }
