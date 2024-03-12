@@ -48,9 +48,9 @@ async function getBlockinfo() {
     const timestamp = await web3.eth.getBlock(await web3.eth.getBlockNumber()).timestamp;
     console.log(blockNumber)
     console.log(block.hash)
-    sendRandom()
-    checkIsSolved()
-    getbal()
+    // sendRandom()
+    // checkIsSolved()
+    // getbal()
     getBlockinfo()
 
 }
@@ -70,13 +70,12 @@ function sendRandom() {
     targetInstance.methods.sendRandomETH().send({
         from: player
     })
-        .then(result => {
-            console.log('Solved status:', result);
-        })
-        .catch(err => {
-            console.error('Error:', err);
-        });
-
+        // .then(result => {
+        //     console.log('Solved status:', result);
+        // })
+        // .catch(err => {
+        //     console.error('Error:', err);
+        // });
 }
 
 function getbal() {
@@ -90,6 +89,10 @@ function getbal() {
 
 }
 
-checkIsSolved()
+// checkIsSolved()
 
-getBlockinfo()
+// getBlockinfo()
+
+setInterval(() => {
+    sendRandom()
+}, 1000)
